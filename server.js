@@ -21,10 +21,6 @@ app.post('/login'; formParser; jsonParser; rqrs; =>{
   res.end('Welcome Home');
  }
 }
-
-
-
-
-
-app.use(express.static("public"));
+//app.(jsonParser) but this way it will be using parser for every single request
+//app.use(express.static("public"));
 app.listen(8080);
