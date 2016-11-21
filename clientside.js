@@ -1,12 +1,12 @@
-const username = 'aper';
+const username = "Hades";
 const reqOpts ={
-  methdod : 'Post',
-  headers: new Header ({
-    'Content - type' , 'application/json'
-  })
-body: JSON.stringify({username, password})
+  method : 'post',
+  headers: new Headers({
+    'Content-type' : 'application/json'
+  }),
+body: JSON.stringify({username})
 };
 fetch('/login', reqOpts)
 .then(resp => resp.text())
-.then(console.log);
+.then((data)=>{document.getElementsByTagName("body")[0].innerHTML=data})
 .catch(console.error);
