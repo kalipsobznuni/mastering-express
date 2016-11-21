@@ -9,3 +9,4 @@ body: JSON.stringify({username, password})
 fetch('/login', reqOpts)
 .then(resp => resp.text())
 .then(console.log);
+.catch(console.error);
