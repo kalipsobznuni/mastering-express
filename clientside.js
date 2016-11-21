@@ -6,4 +6,6 @@ const reqOpts ={
   })
 body: JSON.stringify({username, password})
 };
-fetch('/login', )
+fetch('/login', reqOpts)
+.then(resp => resp.text())
+.then(console.log);
